@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<title>Calculadora de Matrizes</title>
+
+<style>
+body{
+    font-family: Arial, sans-serif;
+    text-align:center;
+    background:#f4f4f4;
+}
+
+.container{
+    max-width:900px;
+    margin:auto;
+    background:white;
+    padding:20px;
+    border-radius:10px;
+}
+
+.matriz{
+    margin:20px;
+}
+
+input{
+    width:60px;
+    height:35px;
+    text-align:center;
+    margin:2px;
+}
+
+button{
+    padding:10px 15px;
+    margin:5px;
+    cursor:pointer;
+}
+
+.linha{
+    margin-bottom:5px;
+}
+</style>
+
+</head>
+<body>
+
+<div class="container">
+
+<h1>Calculadora de Matrizes</h1>
+
+<label>Linhas:</label>
+<input type="number" id="linhas" value="2" min="1">
+
+<label>Colunas:</label>
+<input type="number" id="colunas" value="2" min="1">
+
+<button onclick="gerarMatrizes()">Gerar Matrizes</button>
+
+<div class="matriz">
+    <h2>Matriz A</h2>
+    <div id="matrizA"></div>
+</div>
+
+<div class="matriz">
+    <h2>Matriz B</h2>
+    <div id="matrizB"></div>
+</div>
+
+<select id="operacao">
+    <option value="soma">Soma</option>
+    <option value="subtracao">Subtração</option>
+</select>
+
+<br><br>
+
+<button onclick="calcular()">Calcular</button>
+
+<h2>Resultado</h2>
+<div id="resultado"></div>
+
+</div>
+
+<script src="script.js"></script>
+
+
+</body>
+</html>
